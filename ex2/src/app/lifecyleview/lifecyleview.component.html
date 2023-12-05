@@ -1,0 +1,30 @@
+<div>
+  <p>lifecyleview works!</p>
+
+  <input type="hidden" #lifecycleselection />
+
+  <div class="card-container">
+    <button
+      class="card card-small"
+      (click)="lifecycleselection.value = 'create lifecycle'"
+      tabindex="0"
+    >
+      <svg
+        class="material-icons"
+        xmlns="http://www.w3.org/2000/svg"
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+      >
+        <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+      </svg>
+      <span>Create lifecycle</span>
+    </button>
+  </div>
+</div>
+
+<!-- Lifecycle Terminal -->
+<div class="terminal" [ngSwitch]="lifecycleselection.value">
+  <pre *ngSwitchDefault>create component lifecycle hook events</pre>
+  <pre *ngSwitchCase="'create lifecycle'">The life cycle hooks list</pre>
+</div>
