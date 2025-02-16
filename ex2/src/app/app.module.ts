@@ -4,12 +4,14 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 
-import { LifecyleviewComponent } from './lifecyleview/lifecyleview.component';
+import { LifecycleHooksComponent } from './lifecycle-hooks/lifecycle-hooks.component';
+
+import { Logger } from './logger.service';
 
 @NgModule({
-  declarations: [AppComponent, LifecyleviewComponent],
+  declarations: [AppComponent, LifecycleHooksComponent],
   imports: [BrowserModule, AppRoutingModule],
-  providers: [],
+  providers: [Logger],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
